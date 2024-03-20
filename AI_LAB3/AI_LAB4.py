@@ -1,6 +1,9 @@
 import Arithmetics
 import CoolDivide
+import math
 import TaylorFunctions
+
+print(TaylorFunctions.TaylorCosinus(4,10))
 
 while(True):
     print("Выбор действия:")
@@ -45,12 +48,13 @@ while(True):
             trigAct=input()
 
             print("Введите аргумент функции и число членов ряда тейлора")
-            x,y=input()
+            x=int(input())
+            y=int(input())
 
             if(trigAct=="0"):
-                print(f"sin(x) = {TaylorFunctions.TaylorSinus(x,y)}")
+                print(f"sin(x) = {TaylorFunctions.TaylorSinus(math.radians(x),y)}")
             elif(trigAct=="1"):
-                print(f"cos(x) = {TaylorFunctions.TaylorCosinus(x,y)}")
+                print(f"cos(x) = {TaylorFunctions.TaylorCosinus(math.radians(x),y)}")
             elif(trigAct=="2"):
                 break
     elif(basicAct=="2"):
@@ -60,3 +64,5 @@ while(True):
             a,b=int(input())
 
             print(f"{a}/{b} Целая часть деления={CoolDivivde.GetDivideInt(a,b)}, Остаток от деления = {CoolDivide.GetDivideRem(a,b)}")
+
+ 

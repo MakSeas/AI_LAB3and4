@@ -1,4 +1,5 @@
 import math
+import AI_LAB4
 
 def Task1(x, y):
     a=math.exp(math.log(4)+math.log10(20))+math.pow(x,3)-5*y
@@ -10,4 +11,3 @@ def Task2(x,y):
     c=(a*b)/math.sin(math.radians(30))
     return c, math.round(c)
 
-print(Task2(10,2))
